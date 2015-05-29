@@ -1,6 +1,6 @@
 # Jemplate for jQuery
 
-> Render Jemplate templates using jQuery syntax
+> Render [Jemplate](https://github.com/ingydotnet/jemplate) templates using jQuery syntax
 
 
 ## Getting Started
