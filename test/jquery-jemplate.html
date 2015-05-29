@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="../bower_components/qunit/qunit/qunit.css" media="screen">
     <script src="../bower_components/qunit/qunit/qunit.js"></script>
     <!-- Load local lib and tests. -->
+    <script src="../Jemplate.js"></script>
+    <script src="../jemplates.js"></script>
     <script src="../src/jquery-jemplate.js"></script>
     <script src="jquery-jemplate_test.js"></script>
     <!-- Removing access to jQuery and $. But it'll still be available as _$, if
@@ -18,10 +20,7 @@
   </head>
   <body>
     <div id="qunit"></div>
-    <div id="qunit-fixture">
-      <span>lame test markup</span>
-      <span>normal test markup</span>
-      <span>awesome test markup</span>
-    </div>
+    <div class="jemplate"></div>
+    <div class="jemplate" id="test1" data-name="data element"></div>
   </body>
 </html>

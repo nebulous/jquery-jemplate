@@ -1,7 +1,5 @@
-/* Simple Jemplate plugin for jQuery
- * Copyright (c) 2015 John Lifsey
- * Licensed under the MIT license.
- */
+/*! jquery-jemplate - v0.0.1 - 2015-05-29
+* Copyright (c) 2015 John Lifsey; Licensed MIT */
 (function($) {
 	$.fn.jemplate = function(tmplin, datain) {
 		var data_url;
