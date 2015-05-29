@@ -6,9 +6,8 @@
 ## Getting Started
 
 Download the [production version][min] or the [development version][max].
-
-[min]: https://raw.githubusercontent.com/nebulous/jquery-jquery-jemplate/master/dist/jquery.jquery-jemplate.min.js
-[max]: https://raw.githubusercontent.com/nebulous/jquery-jquery-jemplate/master/dist/jquery.jquery-jemplate.js
+[min]: https://raw.githubusercontent.com/nebulous/jquery-jemplate/master/dist/jquery.jquery-jemplate.min.js
+[max]: https://raw.githubusercontent.com/nebulous/jquery-jemplate/master/dist/jquery.jquery-jemplate.js
 
 In your web page:
 
