@@ -12,6 +12,10 @@ Download the [production version][min] or the [development version][max].
 In your web page:
 
 ```html
+<div id="someid"></div>
+
+<script src="Jemplate.js"></script>
+<script src="jemplates.js"></script>
 <script src="jquery.js"></script>
 <script src="dist/jquery-jemplate.min.js"></script>
 <script>
