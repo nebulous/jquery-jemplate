@@ -1,9 +1,14 @@
 {
   "name": "jquery-jemplate",
   "version": "0.0.1",
-  "dependencies": {},
+  "main": "dist/jquery.jquery-jemplate.min.js",
+  "ignore": [".jshintrc"],
+  "keywords": ["jemplate","template","jquery"],
+  "dependencies": {
+     "jquery": ">=1.5.0"
+  },
   "devDependencies": {
     "qunit": "~1.12.0",
-    "jquery": "latest"
+    "jquery": ">=1.5.0"
   }
 }
