@@ -1,6 +1,6 @@
 # Jemplate for jQuery
 
-> Render [Jemplate](https://github.com/ingydotnet/jemplate) templates using jQuery syntax
+> Render [Jemplate](https://www.jemplate.net) templates using jQuery syntax.
 
 [![Build Status](https://travis-ci.org/nebulous/jquery-jemplate.png)](https://travis-ci.org/nebulous/jquery-jemplate)
 
