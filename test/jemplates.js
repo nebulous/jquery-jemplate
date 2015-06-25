@@ -22,8 +22,8 @@ Jemplate.templateMap['test.tt'] = function(context) {
     try {
 output += 'Hello ';
 //line 1 "test.tt"
-output += stash.get('name');
-output += '.';
+output += stash.get('name') || 'some default';
+output += '.\n';
     }
     catch(e) {
         var error = context.set_error(e, output);

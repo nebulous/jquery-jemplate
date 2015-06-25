@@ -3,33 +3,26 @@
  * Licensed under the MIT license.
  */
 (function($) {
-	$.fn.jemplate = function(tmplin, datain) {
-		var data_url;
+	$.fn.jemplate = function(tmplin, datain, methodin) {
 		if (typeof(tmplin) === "object") {
 			datain = tmplin.stash || tmplin || {};
 			tmplin = datain.jemplate || '';
 		}
 		if (typeof(datain) === "string") {
-			data_url = datain;
-			datain = {};
+			datain = { data_url:datain };
 		}
-
 		return this.each(function(idx, obj) {
 			var $obj = $(obj);
 			var data = $.extend({}, $obj.data(), datain);
 			var tmpl = tmplin || data['jemplate'];
-			var method = data['method'] || 'html';
+			var method = methodin || data['method'] || 'html';
+			var data_url = data['data_url'];
+			data = data_url || data;
 
 			if (typeof tmpl === undefined) { return this; }
-			if (data_url) {
-				$.getJSON(data_url, function(data) {
-					var output = Jemplate.process(tmpl, data);
-					$obj[method](output);
-				});
-			} else {
-				var output = Jemplate.process(tmpl, data);
-				$obj[method](output);
-			}
+			var def = $.Deferred();
+			Jemplate.process(tmpl, data, function(output) { $obj[method](output); def.resolve(output); });
+			return def.promise();
 		});
 	};
 }(jQuery));

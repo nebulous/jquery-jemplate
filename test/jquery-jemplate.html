@@ -9,20 +9,22 @@
     <link rel="stylesheet" href="../bower_components/qunit/qunit/qunit.css" media="screen">
     <script src="../bower_components/qunit/qunit/qunit.js"></script>
     <!-- Load local lib and tests. -->
-    <script src="../Jemplate.js"></script>
-    <script src="../jemplates.js"></script>
+    <script src="Jemplate.js"></script>
+    <script src="jemplates.js"></script>
     <script src="../src/jquery-jemplate.js"></script>
     <script src="jquery-jemplate_test.js"></script>
-    <!-- Removing access to jQuery and $. But it'll still be available as _$, if
-         you REALLY want to mess around with jQuery in the console. REMEMBER WE
-         ARE TESTING A PLUGIN HERE, THIS HELPS ENSURE BEST PRACTICES. REALLY. -->
-    <script>window._$ = jQuery.noConflict(true);</script>
   </head>
   <body>
     <div id="qunit"></div>
     <div class="jemplate"></div>
     <div class="jemplate" id="test1" data-name="data element"></div>
-    <div id="test2" data-jemplate="test.tt">Original content</div>
-    <div id="test3" data-jemplate="test.tt" data-name="data element">Original content</div>
+    <div id="test2" data-jemplate="test.tt">This should be overwritten</div>
+    <div id="test3" data-jemplate="test.tt" data-name="data element">This should be overwritten</div>
+    <div id="test4" data-jemplate="test.tt"></div>
+    <div id="merge" data-jemplate="test.tt" data-name="Name number 1"></div>
+
+    <div class="remote" data-jemplate="test.tt" data-data_url="/test/darth.json">Replace with url</div>
+    <div id="luke">Replace with url</div>
+		<pre id="console">console</pre>
   </body>
 </html>
